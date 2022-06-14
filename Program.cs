@@ -5,6 +5,7 @@ namespace C_Sharp_SourceControl_2
 {
     class Program
     {
+       
         public static void Main(string[] args)
         {
             Console.WriteLine("How many integers?");
@@ -17,7 +18,39 @@ namespace C_Sharp_SourceControl_2
                 array[z] = Convert.ToInt32(Console.ReadLine());
                 z ++;
             }
-            Display(array);
+            String choice = "";
+            do {
+                Console.WriteLine("What would you like to do?");
+                choice = Console.ReadLine();
+                if (choice == "Display") {
+                    Display(array);
+                }
+                if (choice == "Sum") {
+                    Console.WriteLine(sum(array));
+                }
+                if (choice == "Even") {
+                    even(array);
+                }
+                if (choice == "Odd") {
+                    odd(array);
+                }
+                if (choice == "Every Fifth") {
+                    if (array.Length >= 5) {
+                    foreach(int i in everyFifth(array)){
+                        Console.WriteLine(i);
+                    }
+                }
+                    else {
+                        Console.WriteLine("Not enough terms");
+                    }
+                }
+                if (choice == "Divisible by 3") {
+                  foreach(int i in divByThree(array)){
+                        Console.WriteLine(i);
+                    }
+                }
+
+            }while (choice != "Quit");
         }
         private static void Display(int[] v)
         {
