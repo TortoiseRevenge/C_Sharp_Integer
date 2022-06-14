@@ -1,0 +1,8 @@
+
+*.csproj
+
+*.json
+
+*.props
+
+*.cache
