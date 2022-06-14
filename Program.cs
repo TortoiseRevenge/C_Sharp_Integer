@@ -7,6 +7,10 @@ namespace C_Sharp_SourceControl_2
     {
         public static void Main(string[] args)
         {
+             int[] nums = {1, 3, 5, 7, 9 };
+             sum(nums);
+             Console.WriteLine(sum(nums));
+
             int [] array = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
             even(array);
         }
@@ -19,6 +23,15 @@ namespace C_Sharp_SourceControl_2
                 }
             }
             return results;
+        }
+        private static int sum(int[] numbers)
+        {
+            int sum=0;
+               for (int i =0; i<numbers.Length; i++){
+                    sum+=numbers[i];
+               }
+               return sum;
+
         }
         private static List<int> odd(int[] array)
         {
