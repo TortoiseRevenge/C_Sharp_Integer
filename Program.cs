@@ -7,9 +7,16 @@ namespace C_Sharp_SourceControl_2
     {
         public static void Main(string[] args)
         {
-            function();
+            Console.WriteLine("How many numbers?");
+            int[input.nextInt()] numbers = [];
+            for (x = 0; x < numbers.length(); x ++)
+            {
+                Console.WriteLine("Enter an integer: ");
+                numbers[x] = input.nextInt();
+            }
+            Console.WriteLine(numbers);
         }
-        private static void function()
+        private static void AskForInput()
         {
             return;
         }
