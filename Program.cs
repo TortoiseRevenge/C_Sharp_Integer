@@ -7,18 +7,26 @@ namespace C_Sharp_SourceControl_2
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("How many numbers?");
-            int[input.nextInt()] numbers = [];
-            for (x = 0; x < numbers.length(); x ++)
+            Console.WriteLine("How many integers?");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[x];
+            int z = 0;
+            foreach (int i in array)
             {
                 Console.WriteLine("Enter an integer: ");
-                numbers[x] = input.nextInt();
+                array[z] = Convert.ToInt32(Console.ReadLine());
+                z ++;
             }
-            Console.WriteLine(numbers);
+            Display(array);
         }
-        private static void AskForInput()
+        private static void Display(int[] v)
         {
-            return;
+            Console.Write("Numbers that you entered: ");
+            for(int x = 0; x < v.Length; x ++)
+            {
+                Console.Write(v[x] + " ");
+            }
+            Console.Write("\n");
         }
     }
 }
