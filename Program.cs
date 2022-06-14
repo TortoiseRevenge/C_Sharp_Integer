@@ -28,6 +28,17 @@ namespace C_Sharp_SourceControl_2
             }
             Console.Write("\n");
         }
+           
+        private static List<int> even(int[] array)
+        {
+            List <int> results = new List<int>();
+            for (int i = 0; i < array.Length; i++) {
+                if (array[i] % 2 == 0) {
+                    Console.WriteLine(array[i]);
+                }
+            }
+            return results;
+        }
         public static List<int> divByThree(int[] array)
         {
             List<int> result = new List<int>();
