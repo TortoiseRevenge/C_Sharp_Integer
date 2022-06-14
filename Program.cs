@@ -7,20 +7,26 @@ namespace C_Sharp_SourceControl_2
     {
         public static void Main(string[] args)
         {
-            int[] array2 = new int[] { 1, 3, 5, 7, 9 };
-            foreach(int i in divByThree(array2)){
-            Console.WriteLine(i);
+            Console.WriteLine("How many integers?");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[x];
+            int z = 0;
+            foreach (int i in array)
+            {
+                Console.WriteLine("Enter an integer: ");
+                array[z] = Convert.ToInt32(Console.ReadLine());
+                z ++;
             }
-            foreach(int i in everyFifth(array2)){
-            Console.WriteLine(i);
+            Display(array);
+        }
+        private static void Display(int[] v)
+        {
+            Console.Write("Numbers that you entered: ");
+            for(int x = 0; x < v.Length; x ++)
+            {
+                Console.Write(v[x] + " ");
             }
-             int[] nums = {1, 3, 5, 7, 9 };
-             sum(nums);
-             Console.WriteLine(sum(nums));
-
-            int [] array = new int[] {1, 2, 3, 4, 5, 6, 7, 8};
-            even(array);
-            odd(array);
+            Console.Write("\n");
         }
            
         private static List<int> even(int[] array)
