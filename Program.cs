@@ -28,5 +28,48 @@ namespace C_Sharp_SourceControl_2
             }
             Console.Write("\n");
         }
+        public static List<int> divByThree(int[] array)
+        {
+            List<int> result = new List<int>();
+            foreach(int i in array){
+                if(i%3 == 0){
+                    result.Add(i);
+                }
+            }
+            return result;
+        }
+        public static List<int> everyFifth(int[] array){
+            int count = 1;
+            List<int> result = new List<int>();
+            foreach(int i in array){
+                if (count%5 == 0){
+                    result.Add(i);
+                    count++;
+                }
+                else{
+                    count++;
+                }
+            }
+            return result;
+        }
+        private static int sum(int[] numbers)
+        {
+            int sum=0;
+               for (int i =0; i<numbers.Length; i++){
+                    sum+=numbers[i];
+               }
+               return sum;
+
+        }
+        private static List<int> odd(int[] array)
+        {
+            List <int> results = new List<int>();
+            for (int i = 0; i < array.Length; i++) {
+                if (array[i] % 2 == 1) {
+                    Console.WriteLine(array[i]);
+                }
+            }
+            return results;
+        }
     }
 }
